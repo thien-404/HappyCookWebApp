@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+.admin-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.menu ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.menu ul li {
+    margin-bottom: 10px;
+}
+
+.menu ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.menu ul li a i {
+    margin-right: 10px;
+}
+
+.menu ul li a:hover {
+    background-color: #495057;
+}
+
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.nav-link-parent::after {
+    content: "\25B8";
+    float: right;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.nav-link-parent.open::after {
+    transform: rotate(90deg);
+}
+
+.submenu-arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-link-parent.open .submenu-arrow {
+    transform: rotate(90deg);
+}
+
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar label {
+    margin-right: 10px;
+}
+
+.search-bar .input-group {
+    width: 100%;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+.logout-section {
+    margin-top: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 1.5rem;
+    color: bla;
+    font-weight: bold;
+}
+
+.search-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+.search-bar .form-control {
+    border-radius: 20px 0 0 20px;
+}
+.search-bar .btn {
+    border-radius: 0 20px 20px 0;
+}
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto; /* add scollbar */
+    z-index: 1000;
+     
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 250px; /* Độ rộng của sidebar */
+    transition: margin-left 0.3s ease; /* Hiệu ứng chuyển động */
+    height: 100vh; /* Đảm bảo chiều cao là 100% của viewport */
+}
+#toggleScrollbar {
+    overflow: hidden;
+}
